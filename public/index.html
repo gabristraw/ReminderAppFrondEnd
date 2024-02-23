@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reminder App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="py-5">
+  <div class="container">
+    <h1 class="mb-5">Reminder App</h1>
+
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Add Reminder</h2>
+        <form id="addReminderForm" class="mb-3">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" class="form-control" placeholder="Title">
+          </div>
+          <div class="form-group">
+            <label for="datetime">Date and Time</label>
+            <input type="datetime-local" id="datetime" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary">Add Reminder</button>
+        </form>
+      </div>
+
+      <div class="col-md-4">
+        <h2>Delete Reminder</h2>
+        <form id="deleteReminderForm" class="mb-3">
+          <div class="form-group">
+            <label for="deleteId">Reminder ID</label>
+            <input type="text" id="deleteId" class="form-control" placeholder="Reminder ID">
+          </div>
+          <button type="submit" class="btn btn-danger">Delete Reminder</button>
+        </form>
+      </div>
+
+      <div class="col-md-4">
+        <h2>List Reminders</h2>
+        <button id="listReminders" class="btn btn-secondary mb-3">List Reminders</button>
+        <ul id="remindersList" class="list-unstyled"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
